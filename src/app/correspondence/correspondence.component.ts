@@ -30,7 +30,7 @@ export class CorrespondenceComponent implements OnInit {
     id:'custom',
     itemsPerPage:10,
     currentPage:1,
-    totalItems:this.corres_data.lenght
+    totalItems:this.corres_data.length
   };
 
   isEverythingSelected:boolean;
@@ -44,7 +44,7 @@ export class CorrespondenceComponent implements OnInit {
 
   checkUncheckAll(){
     console.log(this.config.currentPage)
-    for(var i=0;i<this.corres_data.lenght;i++){
+    for(var i=0;i<this.corres_data.length;i++){
       this.corres_data[i].isSelected=this.isEverythingSelected;
     }
     this.getCheckedItemList();
@@ -61,11 +61,11 @@ export class CorrespondenceComponent implements OnInit {
 
   getCheckedItemList(){
     this.checkedCategoryList=[];
-    for(var i=0; i<this.corres_data.lenght;i++){
+    for(var i=0; i<this.corres_data.length;i++){
       if(this.corres_data[i].isSelected)
       this.checkedCategoryList.push(this.corres_data[i]);
     }
-    this.checkedCategoryList=JSON.stringify(this.checkedCategoryList.lenght);
+    this.checkedCategoryList=JSON.stringify(this.checkedCategoryList.length);
   }
 
   getCorrespondenceService() {
@@ -112,7 +112,7 @@ export class CorrespondenceComponent implements OnInit {
     this.data_result=true;
     this.getCorrespondenceService();
   }
-  
+
   back_search() {
     this.form_page=false;
     this.data_result=false;

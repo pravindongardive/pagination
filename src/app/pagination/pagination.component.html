@@ -7,7 +7,7 @@
 			<span class="border" (click)="p.previous()"><</span>
 		</div>
         <div class="page-number border" *ngFor="let page of p.pages" [class.current]="p.getCurrent()===page.value">
-            <span (click)="p.setCurrent(page.value)" *ngIf="p.getCurrent()!=page.value">{{page.label}}</span>
+            <span (click)="p.setCurrent(page.value)" *ngIf="p.getCurrent()!==page.value">{{page.label}}</span>
             <div *ngIf="p.getCurrent()===page.value">
                 <span>{{ page.label }}</span>
             </div>
