@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i");
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.sidebar {
+    border-right: 1px solid #ccc;
+}
+
+.main-content {
+    min-height: calc(100vh - 202px);
+}
+
+.login-content {
+    min-height: calc(100vh - 150px);
+}
+
+.btn-custom {
+    color: #fff;
+    padding: 7px 25px;
+    border-radius: 2em;
+    text-decoration: none;
+    background-color: #7d3f98;
+}
+
+.btn-custom:hover {
+    color: #fff;
+    border-color: #414141;
+    text-decoration: none;
+    background-color: #414141;
+}
+@import '~bootstrap/scss/bootstrap'
